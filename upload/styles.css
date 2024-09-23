@@ -1,0 +1,209 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    /* background-image: url(https://tse1.mm.bing.net/th?id=OIP.F1YJaijSty0dUgxSb7uTAgHaEG&pid=Api&P=0&h=220);
+    background-size:1000px,1000px;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.starting-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px,20px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.contact-info{
+    margin-left: 100px;
+    font-size: 14px;
+}
+
+.contact-info span{
+    color: rgb(196, 221, 9);
+    margin-right: 5px;
+
+}
+
+.auth-options{
+    margin: 0 10px;
+    text-decoration: none;
+    color:black;
+    display: flex;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+
+.language{
+    margin: 10px;
+    margin-right: 100px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px;
+    background-color: black;
+}
+
+.nav-bar logo{
+
+    flex:1;
+}
+
+.nav-links{
+    display: flex;
+    flex: 5;
+    justify-content: center;
+}
+
+.nav-links a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover{
+    color: yellow;
+}
+
+.book-now{
+    flex: 1;
+    text-align: right;
+}
+
+.book-now button{
+    background-color: white;
+    padding: 15px;
+    cursor: pointer;   
+
+}
+
+.first-page{
+    text-align: center;
+}
+
+.first-page h3{
+    margin-top: 100px;
+    color: rgb(243, 217, 18);
+    font-size: 20px;
+}
+
+.first-page h1{
+    margin-top: 10px;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+.booking-form{
+    width: 60%;
+    border: 2px solid rgb(236, 236, 233);
+    display: flex;
+    flex-direction: row;
+    gap :20px;
+    background-color: white;
+    justify-content: center;
+    margin-left: 350px;
+
+}
+
+.input-container{
+    position: relative;
+}
+
+.input-container input,
+.input-container select{
+    padding: 10px;
+    padding-right: 30px;
+    border: 1px solid rgb(213, 209, 209);
+    width: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+.input-container p{
+    color: grey;
+    margin: 10px;
+    text-align: center;
+}
+
+/* .input-container i{
+    right:5px;
+    top: 70%;
+    color: rgb(217, 194, 19);
+} */
+
+.button-container{
+    background-color: black;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    height: 100px;
+}
+.book-now{
+    border: none;
+    background-color: black;
+    padding:10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.image-text{
+    display: flex;
+    justify-content: space-between;
+    margin: -60px 100px 100px 100px;
+}
+
+.text{
+    margin-top: 100px;
+    align-items: center;
+}
+
+.text h5{
+    color: rgb(196, 168, 14);
+    font-size: 20px;
+}
+
+.text h3{
+    font-weight: bold;
+}
+.text img{
+    margin-top: 20px;
+}
+
+.text p{
+    color: rgb(115, 113, 113);
+}
+
+.facility{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-evenly;
+    margin: 200px 100px 100px 200px;
+    
+}
+
+.facility-card{
+    width: 50%;
+}
+
+.facility-card p{
+    color: grey;
+}
+
+.background{
+    width: auto;
+    height:1000px;
+    border: 1px solid;
+    background-image: url(https://tse3.mm.bing.net/th?id=OIP.DaJJxDpzaiaAzUXtfZ3dOgHaE7&pid=Api&P=0&h=220);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
