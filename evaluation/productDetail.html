@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Product Details</h1>
+        <a href="product.html">Back to Products</a>
+    </header>
+
+    <main id="product-detail">
+        <div class="product-detail-container">
+            <div class="image-slider">
+                <img id="slider-image" src="" alt="Product Image" />
+            </div>
+            <div class="product-info">
+                <h2 id="product-name"></h2>
+                <p id="product-price"></p>
+                <p id="product-description"></p>
+                <p>Average Rating: <span id="product-rating"></span></p>
+            </div>
+        </div>
+
+        <section id="reviews-section">
+            <h3>Customer Reviews</h3>
+            <ul id="reviews-list">
+                <!-- Reviews will be dynamically loaded here -->
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const productId = new URLSearchParams(window.location.search).get('id');
+            const products = [
+                { id: 1, name: "Product A", price: 30, description: "This is a detailed description of Product A.", image: ["imageA1.jpg", "imageA2.jpg"], reviews: [5, 4, 3] },
+                { id: 2, name: "Product B", price: 20, description: "This is a detailed description of Product B.", image: ["imageB1.jpg", "imageB2.jpg"], reviews: [3, 2, 4] },
+                // Add more products as needed
+            ];
+
+            const product = products.find(p => p.id == productId);
+
+            if (product) {
+                document.getElementById('product-name').textContent = product.name;
+                document.getElementById('product-price').textContent = Price$$;{productprice};
+                document.getElementById('product-description').textContent = product.description;
+                document.getElementById('product-rating').textContent = calculateAverageRating(product.reviews);
+                setupImageSlider(product.image, 'slider-image');
+                displayReviews(product.reviews);
+            }
+
+            function calculateAverageRating(reviews) {
+                const sum = reviews.reduce((acc, curr) => acc + curr, 0);
+                return (sum / reviews.length).toFixed(1);
+            }
+
+            function setupImageSlider(images, containerId) {
+                let currentIndex = 0;
+                const container = document.getElementById(containerId);
+                container.src = images[currentIndex];
+
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    container.src = images[currentIndex];
+                }, 3000);
+            }
+
+            function displayReviews(reviews) {
+                const reviewsList = document.getElementById('reviews-list');
+                reviewsList.innerHTML = '';
+                reviews.forEach((rating, index) => {
+                    const reviewItem = document.createElement('li');
+                    reviewItem.textContent = Review ;{index + 1}  {'⭐'.repeat(rating)};
+                    reviewsList.appendChild(reviewItem);
+                });
+            }
+        });
+    </script>
+
+    <style>
+        /* Basic styling for the product details page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .product-detail-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .image-slider {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-slider img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .product-info {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #reviews-section {
+            margin: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #reviews-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        #reviews-list li {
+            background: #e4e4e4;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-red">
+  <select name="" id="select_tag" onclick="click()">
+    
+    <option value="Dog" onselect="click()">Dog</option>
+    <option value="Cat" onselect="click()" >Cat</option>
+    <option value="Elephant"  >Elephant</option>
+    <option value="Lion" onselect="click()" >Lion</option>
+  </select>
+  
+  <img src="p.jpeg" alt=""id="image">
+
+  
+</body>
+</html>
+
+<script>
+
+  function click(){
+    selected_animal = document.getElementById("select_tag").value
+    animal_img = document.getElementById("image")
+
+    if (selected_animal == "Dog"){
+      animal_img.src = "download.jpg"
+    }
+    if (selected_animal == "Lion"){
+      animal_img.src = "download (1).jpg"
+    }
+    console.log(selected_animal)
+  }
+  
+</script>

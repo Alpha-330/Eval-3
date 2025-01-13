@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table border="1">
+    <thead>
+      <tr>
+        <th><button onclick="book()">48 Laws Of Power</button></th>
+        <th>A Death on the Nile</th>
+        <th>Atomic Habits</th>
+        <th>Wings Of Fire</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function book() {
+      // Check if an object element already exists and remove it
+      const existingObject = document.querySelector("object");
+      if (existingObject) {
+        existingObject.remove();
+      }
+
+      // Create the object element to embed the PDF
+      const pdfObject = document.createElement("object");
+      pdfObject.setAttribute("data", "Bcaresult6thsem.pdf"); // Set the PDF file path here
+      pdfObject.setAttribute("type", "application/pdf");
+      pdfObject.setAttribute("width", "800");
+      pdfObject.setAttribute("height", "500");
+
+      // Append the object to the body or any other container
+      document.body.appendChild(pdfObject);
+    }
+  </script>
+</body>
+</html>

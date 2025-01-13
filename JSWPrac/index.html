@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link  href="script.js">
+</head>
+<body>  
+  <script>
+    const fruits = ["apple", "banana", "orange"];
+    const vegetables = ["carrot", "broccoli", "spinach"];
+    console.log(combiningArrays(fruits, vegetables)); // Output: [ 'apple', 'banana', 'orange', 'carrot', 'broccoli', 'spinach' ]
+    function combiningArrays(vegetables,fruits){
+      var spe=[...fruits,...vegetables]
+      return spe
+    }
+  </script>
+</body>
+</html>

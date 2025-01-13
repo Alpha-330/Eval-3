@@ -1,0 +1,50 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+body{
+  background:radial-gradient(circle,rgb(130, 170, 226)0%,rgb(248, 0, 4)100%);
+  display: flex;
+  justify-content: center;
+  
+
+}
+form{
+  background-color: aliceblue;
+  margin-top: 20px;
+  padding : 20px;
+  border-radius: 10px;
+}
+.form{
+  margin-top: 50px;
+  
+  
+}
+.input-feild{
+  width: 100%;
+  padding: 7px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.rating{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button{
+  padding: 6px;
+  background-color: rgb(26, 210, 124);
+  
+}
+.w{
+  text-align: center;
+}
+.rating{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
